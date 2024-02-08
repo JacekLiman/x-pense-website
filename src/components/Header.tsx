@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState, useEffect } from "react";
 import { header } from "../data";
 import { HiMenuAlt4, HiOutlineX } from "react-icons/hi";
 import MobileNav from "./MobileNav";
@@ -6,12 +6,19 @@ import Nav from "./Nav";
 
 const Header = () => {
   const [mobileNavActive, setMobileNavActive] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
 
   const { logo, btnText } = header;
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      window.scrollY > 10 ? setIsScrolling(true) : setIsScrolling(false);
+    });
+  }, []);
   return (
-    <header className="fixed top-0 left-0 w-full z-10">
+    <header className={`fixed top-0 left-0 transition-all duration-500 w-full z-10 bg-white ${ isScrolling ? "lg:py-4 py-3 shadow-2xl":"lg:py-8 py-5" } `}>
       <div className="container mx-auto">
-        <div className="lg:py-12 py-5 flex items-center justify-between">
+        <div className=" flex items-center justify-between">
           <div>
             <a href="/">
               <img src={logo} alt="" />

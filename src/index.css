@@ -43,7 +43,7 @@
     @apply h-[60px] px-[16px] text-lg font-normal;
   }
   .btn-sm {
-    @apply py-[10px] px-[16px] text-base font-normal;
+    @apply py-[14px] px-[16px] text-base font-normal;
   }
   .btn-accent {
     @apply text-white bg-accent hover:bg-accentHover;

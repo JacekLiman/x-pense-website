@@ -11,7 +11,7 @@ const Hero = () => {
             <h1 className="title text-center lg:text-left">{title}</h1>
             <p className="text-center lead lg:text-left">{subtitle}</p>
             <div className="flex items-center gap-2 justify-center lg:justify-start">
-              <button className="btn gap-2 xl:btn-lg btn-sm btn-accent">
+              <button className="btn gap-2 xl:btn-md btn-sm btn-accent">
                 {btnText} <HiOutlineChevronDown />
               </button>
               <p className="text-light lg:lead lg:mb-0">{compText}</p>
@@ -19,7 +19,7 @@ const Hero = () => {
           </div>
 
           <div className="flex justify-center items-center">
-            <img className="max-w-[350px] sm:max-w-none" src={image} alt="" />
+            <img className="max-w-[350px] sm:max-w-none w-full" src={image} alt="" />
           </div>
         </div>
       </div>

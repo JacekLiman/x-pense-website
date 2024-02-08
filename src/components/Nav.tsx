@@ -7,7 +7,7 @@ const Nav = () => {
         {nav.map((item, idx) => {
           return (
             <li key={idx}>
-              <a className="inline-block p-2" href={item.href}>
+              <a className="inline-block p-2 hover:text-accent " href={item.href}>
                 {item.name}
               </a>
             </li>
