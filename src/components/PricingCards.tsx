@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { HiCheck, HiOutlineArrowNarrowRight } from "react-icons/hi";
-import { MdArrowRightAlt } from "react-icons/md";
+
 
 type PricingCardsProps = {
   cards: {
@@ -23,7 +23,7 @@ const PricingCards = ({ cards }: PricingCardsProps) => {
       {cards.map((card, idx) => {
         const { icon, title, services, price, userAmount, btnText } = card;
         return (
-          <div onClick={()=>setIndex(idx)} className={`${index === idx ? "shadow-2xl":" shadow-transparent shadow-2xl"} rounded-[12px]  w-[350px] pt-8 pb-16 px-7 space-y-5 cursor-pointer transition-all`}>
+          <div onClick={()=>setIndex(idx)} className={`${index === idx ? "shadow-2xl":" shadow-transparent shadow-2xl"} rounded-[12px]  w-[340px] pt-8 pb-16 px-7 space-y-5 cursor-pointer transition-all`}>
             <img src={icon} alt="" />
             <h3 className="text-[30px] font-medium">{title}</h3>
             <ul className="">
@@ -40,7 +40,7 @@ const PricingCards = ({ cards }: PricingCardsProps) => {
             </ul>
             <p className="text-[22px]">{price}/<small className="text-light">year</small></p>
             <small className="text-light">{userAmount}</small>
-            <button className={`${index === idx ? "btn-accent":"btn-outline"}  px-3 py-1 flex items-center rounded-lg`}>{btnText} <MdArrowRightAlt/></button>
+            <button className={`${index === idx ? "btn-accent":"btn-outline"}  px-3 py-1 flex items-center rounded-lg`}>{btnText} <HiOutlineArrowNarrowRight/></button>
           </div>
         );
       })}

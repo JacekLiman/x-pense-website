@@ -10,6 +10,7 @@ import Feature2 from "./components/Feature2";
 import Feature3 from "./components/Feature3";
 import Product from "./components/Product";
 import Pricing from "./components/Pricing";
+import Testimonilas from "./components/Testimonilas";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Feature3/>
       <Product/>
       <Pricing/>
+      <Testimonilas/>
     </div>
   );
 }
