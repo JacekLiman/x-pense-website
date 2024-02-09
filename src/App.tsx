@@ -11,6 +11,7 @@ import Feature3 from "./components/Feature3";
 import Product from "./components/Product";
 import Pricing from "./components/Pricing";
 import Testimonilas from "./components/Testimonilas";
+import Cta from "./components/Cta";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Product/>
       <Pricing/>
       <Testimonilas/>
+      <Cta/>
     </div>
   );
 }

@@ -23,10 +23,10 @@ const PricingCards = ({ cards }: PricingCardsProps) => {
       {cards.map((card, idx) => {
         const { icon, title, services, price, userAmount, btnText } = card;
         return (
-          <div onClick={()=>setIndex(idx)} className={`${index === idx ? "shadow-2xl":" shadow-transparent shadow-2xl"} rounded-[12px]  w-[340px] pt-8 pb-16 px-7 space-y-5 cursor-pointer transition-all`}>
+          <div key={idx} onClick={()=>setIndex(idx)} className={`${index === idx ? "shadow-2xl":" shadow-transparent shadow-2xl"} rounded-[12px] w-[340px] pt-8 pb-16 px-7 space-y-5 cursor-pointer transition-all`}>
             <img src={icon} alt="" />
             <h3 className="text-[30px] font-medium">{title}</h3>
-            <ul className="">
+            <ul>
               {services.map((service, idx) => {
                 return (
                   <li key={idx} className="flex items-center gap-2">

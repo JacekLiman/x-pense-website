@@ -38,12 +38,11 @@ const ClientSlider = ({ clients }: ClientProps) => {
       {clients.map((client, idx) => {
         const { message, image, name, position, borderColor } = client;
         return (
-          <SwiperSlide
-            className="border-t-[10px] rounded-t-[12px]"
-            style={{ borderColor: borderColor }}
-            key={idx}
-          >
-            <div className="w-full mx-auto  rounded-[12px] border border-grey py-6 px-[30px]">
+          <SwiperSlide key={idx}>
+            <div
+              style={{ borderTopColor: borderColor }}
+              className="border border-t-[10px]  rounded-t-[12px] w-full mx-auto py-6 px-[30px] max-w-[340px] md:max-w-none"
+            >
               <p className="mb-[30px]">{message}</p>
               <div className="flex gap-[10px] items-center ">
                 <img src={image} alt="" />
