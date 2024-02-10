@@ -14,42 +14,25 @@ const Newsletter = () => {
           <div className="text-center md:text-left">
             <h3 className="font-medium text-2xl">LINKS</h3>
             <ul className="mt-5 space-y-2">
-              {links.map((link, idx) => {
-                return (
-                  <li className="font-medium hover:font-bold" key={idx}>
-                    <a href={link.href}>{link.name}</a>
-                  </li>
-                );
+              {links.map((link,idx)=>{
+                return <li className="font-medium hover:font-bold" key={idx}><a href={link.href}>{link.name}</a></li>
               })}
             </ul>
           </div>
           <div className="text-center md:text-left">
             <h3 className="font-medium text-2xl">LEGAL</h3>
             <ul className="mt-5 space-y-2">
-              {legal.map((legal, idx) => {
-                return (
-                  <li className="font-medium hover:font-bold" key={idx}>
-                    <a href={legal.href}>{legal.name}</a>
-                  </li>
-                );
+              {legal.map((legal,idx)=>{
+                return <li className="font-medium hover:font-bold" key={idx}><a href={legal.href}>{legal.name}</a></li>
               })}
             </ul>
           </div>
           <div className="md:col-span-2 text-center md:text-left">
             <h3 className="font-medium text-2xl">NEWSLETTER</h3>
             <p className="text-light mt-5 mb-3">{newsletter.title}</p>
-            <form
-              onSubmit={(e) => e.preventDefault()}
-              className="mb-3 flex w-full items-center justify-between  p-[5px] border"
-            >
-              <input
-                placeholder="Enter your email"
-                className="outline-none w-[150px]"
-                type="text"
-              />
-              <button className="py-1 px-3 text-white bg-accent hover:bg-accentHover">
-                Subscribe
-              </button>
+            <form onSubmit={(e)=>e.preventDefault()} className="mb-3 flex items-center justify-between  p-[5px] border">
+              <input placeholder="Enter your email" className="outline-none w-full " type="text" />
+              <button className="py-1 px-4 text-white bg-accent hover:bg-accentHover">Subscribe</button>
             </form>
             <small className="text-light">{newsletter.subtitle}</small>
           </div>
