@@ -12,6 +12,8 @@ import Product from "./components/Product";
 import Pricing from "./components/Pricing";
 import Testimonilas from "./components/Testimonilas";
 import Cta from "./components/Cta";
+import Footer from "./components/Footer";
+import Newsletter from "./components/Newsletter";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
       <Pricing/>
       <Testimonilas/>
       <Cta/>
+      <Newsletter/>
+      <Footer/>
     </div>
   );
 }

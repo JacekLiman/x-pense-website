@@ -246,14 +246,10 @@ export const footer = {
     { name: 'Cookie policy', href: '/' },
   ],
   newsletter: {
-    title: 'Newsletter',
-    subtitle: 'Over 25000 people have subscribed',
-  },
-  form: {
-    placeholder: 'Enter your email',
-    btnText: 'Subscribe',
-    smallText: 'We don’t sell your email and spam',
-  },
+    title: 'Over 25000 people have subscribed',
+    subtitle: "We don't sell your email and spam",
+  }
+  
 };
 
 export const copyright = {
@@ -265,7 +261,7 @@ export const copyright = {
     name: 'Contact us',
     href: '/',
   },
-  copyText: 'Copyright @ 2022 xpence',
+  copyText: 'Copyright @ 2024 xpence',
   social: [
     { icon: FacebookIcon, href: '/' },
     { icon: TwitterIcon, href: '/' },
